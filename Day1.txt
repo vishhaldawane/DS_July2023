@@ -1,0 +1,215 @@
+
+	space+time+situation
+
+
+			Java Technologies
+				|
+		---------------------------------
+		|		|		|
+		JSE		JEE		JME
+		|		|		|	
+		core		enterprise	micro [ android ]
+		|		|		handheld devices [ mobile ]
+	Language fundas		|
+	OOPS concepts		------------------
+	packages		|	|	|
+	exception handling	EJB	Entity	Message
+	multithreading		|Spring |	|JMS
+				|	|	SMS Whatsapp Mail
+	generics		|	---------	
+	collections	    ---------	|	|	
+	file handling	    |       |  BMP	CMP
+	jdbc		Stateless  Stateful
+	|		
+Advanced Java
+	Socket programming
+	RMI
+	
+Persistence : means storing JAVA OBJECTS  on the database as a ROW
+				|			      |
+	DML+DQL			+-----------------------------+
+insert/update/delete/select			|
+					    ORM Tools [ Object Relational Mapping ]	
+			
+
+
+	Desktip Application, eg.	Calculator, MSPaint, MSWord
+					   VS.
+	Enterprise Application, e.g Book My Show, Currency Converter, Google Doc
+
+	1. Remotely available
+	2. High Availbaility
+	3. Multithreaded
+	4. Pooling of resources [ common users ]
+	5. Caching of resources [ unique users identified by PK ]
+	6. Tranaction management [ ACID properties ] 
+	7. Security management [ https ]
+
+
+	BACKEND | Java and DB
+	|
+	|To write REST API	class
+	|			|		   <-----data--------->
+URL	https://serverip:port/BankProject/addPayee/101/Suresh/BOB929292
+	<---7-----1-2--3--->   4/5        6	 <--- can be java object values-->
+	|				  |
+	|				calls a 
+	|				java function
+	|
+	|
+	FRONT END | javascript + html + css + jquery + ajax
+	index.html : <a href="URL"> Add Payee </a>
+
+
+
+	7 Habits of Highly Effective People 
+
+		u cannot decide your future
+		but you can decide your habits [ neural network ] 
+		and these habits will decide your future
+
+		PRIVATE VICTORY
+		1. Be Proactive
+		2. Begin WITH the END in Mind
+		3. Put First Thing First
+
+		4.
+
+		5.
+		6.
+		7.
+
+
+
+
+
+			Java Programs 
+				|
+		-----------------------------------
+		|		|		|
+		Applications	Applets		Servlets
+		|		|		|
+		main()		no main		no main
+				....		init,service,destroy
+
+	com <--- folders / packages
+	|
+	dassault <-- folders / package
+	|
+	First.java <--- 
+	First.class
+
+First.java
+--------------
+package com.dassault;
+
+public class First 
+{	
+	public static void main(String args[])
+	{
+		System.out.println("Hello World");
+	}
+}
+
+		javac First.java
+		java Second
+
+class Jungle
+{
+	static Tiger tiger = new Tiger();
+}
+class Tiger
+{
+	void roar() {
+
+	}
+}
+	Jungle.tiger.roar();
+
+class System
+{
+	static PrintStream out = ....
+}
+class PrintStream
+{
+	void println() { }
+}
+	System.out.println();
+
+
+Naming Conventions
+--------------------
+
+	0. ProjectName : PascalCase : FirstProject, MultithreadingProject
+
+	1. ClassName : PascalCase : DriverManager, ResultSet, 
+
+	2. variableName : camelCase : rollNumber, socialSecurityNumber
+
+	3. methodName   : setLookAndFeel(), changeDepartmentName()
+
+	4. CONSTANT : CAPITALS : MAX,MIN, PI, SPEED_OF_LIGHT
+					GOD_IS_NO_WHERE
+					GOD_IS_NOW_HERE
+
+	5. packages : allsmalss : java.lang, java.awt.event 
+
+	package Com.Ds;
+	class driverManager {
+		int RollNumber;
+
+			void OpenConnection() {
+
+			}
+	}
+	-----------------
+
+	package com.ds;
+	class DriverManager {
+		int rollNumber;
+		void openConnection() {
+		
+		}
+	}
+-----------------------------------------------
+
+	Packages = similar to directories
+
+
+		directory | folder : to organize the concerned files
+
+			
+				jungle
+				|
+		------------------------------------
+		|	|	|	|	
+		cave	river	tree	house
+		|	|	|	|
+		Tiger	Frog	Parrot	FarmHouse
+		Lion	Fish	Monkey		- main()
+		Bear	Duck	BengalTiger
+
+
+
+		java
+		|
+		jungle.cave		jungle/cave - unix
+					jungle\cave -- windows
+
+		
+		1.        <-- default package access           
+		2. private
+		3. protected
+		4. public
+
+
+
+
+
+
+
+
+
+
+
+
