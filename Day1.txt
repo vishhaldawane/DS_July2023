@@ -203,7 +203,39 @@ Naming Conventions
 		4. public
 
 
+Pushpendra Rajesh   Kunal  Nikhil 
+Devendra   Prajakta Maithili Roshan Vishal
+Omkar      Rohan    Sashwat  Aryan  Devyani
+Mitali     Akshay   Shruti   Pratik Rathan
 
+
+				Data Types
+				|
+	------------------------------------------------
+	|						|
+	Primitive					Secondary
+	|							|
+------------------------------------------------		Object [ root of the class hierarchy ]
+|		|		|	 |			 |
+Integral	Floating   Character  Boolean			-----------------------------
+|		|		|	 |			|	 |		|
+byte  1 	float  4	char 2	 boolean 1 false	String StringBuffer StringBuilder
+short 2		double 8	ASCII+UNICODE	   true		 |
+int   4								char *month="June"; strcmp(month,"january");;
+long  8
+
+	Windows		Windows		Linux
+	TurboC		VC++		TurboC
+	int		int		int
+	2		4		4
+
+		char alpha='A';
+
+
+	0000 0000 0000 0000
+	<-------> <------->
+		  ASCII
+	<---UNICODE------->
 
 
 
