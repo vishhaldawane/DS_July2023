@@ -1,4 +1,47 @@
 
+
+
+MPR
+---------------------------------------------------------------------
+Pushpendra	Rajesh		Kunal		Nikhil
+---------------------------------------------------------------------
+Deven		Prajakta	Maithili	Roshan	Vishal
+---------------------------------------------------------------------
+Omkar		Rohan		Sashwat		Aryan	Devyani
+---------------------------------------------------------------------
+Mitali		Akshay		Shruti		Pratik	Ratan
+---------------------------------------------------------------------
+
+GT
+---------------------------------------------------------------------
+		Pawan		Shobhit		Ankush
+---------------------------------------------------------------------
+Anjali		Arya		Vikas		Paritosh
+---------------------------------------------------------------------
+Pallavi		Srijani		Mihir		Darshan
+---------------------------------------------------------------------
+Pratiksha 	Salil 		Mayuresh	
+---------------------------------------------------------------------
+
+				who
+				|role? 
+		-----------------------------------
+		|				|
+		where				when
+		|space				|time
+	--------------------------------------------------
+	|			|			|
+	why			what			how
+	reason			information		implementation
+								|
+							--------------
+							|	   |
+							success   feedback
+	
+		
+
+
+
 	space+time+situation
 
 
@@ -236,6 +279,292 @@ long  8
 	<-------> <------->
 		  ASCII
 	<---UNICODE------->
+
+
+
+
+
+
+
+			Association 
+			     |
+		---------------------------------
+		|	|		|	|
+		isA	hasA		usesA	producesA
+
+
+
+	class Machine
+	{
+	}
+
+	class WashingMachine extends Machine
+	{
+	}
+
+
+	Top to Bottom
+
+	POPS = Procedure Oriented Programming System
+
+		procedure() <--- data
+
+		
+		var1	var2	var3	var4	var5	var6	var7
+
+				main() {
+				}
+
+		fun1()	fun2()	fun3()	fun4()	fun5()
+
+
+
+
+	OOPS 
+
+	Object Oriented Programming System
+	-----------------------------------
+		mind shift
+
+
+
+
+                                main() {
+    
+                            }
+
+	Bottom to Top
+	------------------------------
+	var1  var2
+                fun1()  fun2()  
+	------------------------------
+	var3 var4 var5
+	fun3()  fun4() 
+
+	------------------------------
+	var6 var7
+	 fun5()
+	------------------------------
+
+
+	Classes				vs		Object
+	|						|
+is a blue print of an Object		      instance of a Class	
+	
+
+	simple text file			a real world memory object
+
+	IDEA	
+
+	class SavingsAccount			SavingsAccount savAccObj =
+	{						new SavingsAccount();
+		FILEDS(data members)
+		+
+		METHODS(member functions)	
+	}
+
+	design of the object			outcome of that design
+
+	blueprint of a house			the actual house
+	  					- land? soil?
+	    					building material?
+	    					roofs, briks,
+	 paper, pencil, 
+	drawing material
+
+	-----------------------------------------------------------
+
+	
+
+	Constructor
+	-------------
+
+
+			-is a special code block
+			- which has the same name as per enclosing classname
+
+			- it does not have return type
+			- it can take parameters | hence it can be overloaded
+			
+			- IT IS CALLED DURING OBJECT CREATION PROCESS
+
+			- IT IS INVOKED AUTOMATICALLY
+
+			- IT CANNOT BE CALLED POST OBJECT CONSTRUCTION
+
+			- to initialize the object content
+
+			- if a user defined constructor is not specified
+			then JPL provides a default constructor
+
+			- U CAN HAVE EITHER IMPLICIT OR EXPLICIT BUT NOT BOTH
+
+	class Flight
+	{
+		<- there is a default constructor | IMPLICIT NO-ARG CTOR
+	}
+		
+	class Book
+	{
+		Book() { // explicit no-arg constructor
+		
+		}
+	}
+
+		Book b1 = new Book();
+		b1.Book(); //ERROR
+
+
+Four Basic Function Types
+
+	1. function without argument and without return value
+
+		void clearScreen() {
+		}
+
+	2.  function with argument BUT  without return value
+
+		void gotoLocation(float lattitude, float longitude){
+		}
+
+	3.  function with argument and   with return value
+
+		float  findAverage(float value1, float value2){
+			return (value1+value2)/2.0f;
+		}
+
+	4. function without argument, BUT with return value
+
+		double calculateDistanceBetweenEarthAndSun() {	
+
+			final INT TIME_TAKEN=480;
+			final float SPEED_OF_LIGHT=186000.519;
+
+			return TIME_TAKEN * SPEED_OF_LIGHT;
+		}		
+	
+
+OOPS Concepts
+-----------------
+
+	1. Abstraction
+		- it is the "what is ?" part of an object
+
+
+		What is an ATM?
+			- dispense cash!!!!
+
+		i) data abstraction
+		ii) procedural abstraction 
+		iii) class abstraction
+	
+		- hiding the complexity of an object
+		- providing the simplicity : USAGE of the object
+			- via public / accessible functions
+
+		
+	2. Encapsulation
+			
+		- it is the "how is it?" part of object
+
+		- binding of data with concerned function
+			- data is kept as private
+			
+
+
+	3. Polymorhism
+		
+		ability of a business entity to have multiple forms
+
+		a) class extension [ inheritance ]
+		b) function overloading
+			ability of a function to be redefined
+			on following terms
+			 i) number of parameters
+			ii) type of parameters
+			iii) type of sequence of parameters
+
+		
+		c) function overriding
+
+			let subclass redefine the function 
+			of its parent
+
+			- hiding the function of the parent
+
+		d)  operator overloading
+
+			ability of an operator to participate
+			objects in math expressions
+
+	class Employee { }
+
+	Employee e1,e2,e3;
+
+	e3 = e1 + e2;
+
+				Doctor
+				|
+			-------------------
+			|
+			Surgeon
+			|
+		-----------------
+		|
+	HeartSurgeon
+
+
+				BankAccount
+				|
+		-------------------------------------
+		|		|		|
+	SavingsAccount	CurrentAccount	CreditCardAccount
+	|
+	------------
+		|
+	FixedDepositAccount
+
+
+
+
+
+
+
+
+
+
+
+	4. Inheritance
+
+		Derivation	 vs		Implementation
+		|				|
+		|				|
+		Point2D <-super			MusicalInstrument <--abstract
+		|x,y				|play();
+		|show(){}			|
+		|				|
+		Point3D <--sub			StringBasedMusicalInstrument <--abstract
+		|				|tuneStrings();
+		|				|	
+		ColouredPoint3 <--subD		Guitar
+		|color				|play(){}
+						|tuneStrings(){}
+
+		a. single level
+		b. multi level
+		c. multiple level - interfaces
+		d. hierarchical level
+	
+
+
+	5. Object communication
+
+	
+
+
+
+
+
 
 
 
