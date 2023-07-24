@@ -1,11 +1,13 @@
 
+82877658968
+104673
 
 
 MPR
 ---------------------------------------------------------------------
 Pushpendra	Rajesh		Kunal		Nikhil
 ---------------------------------------------------------------------
-Deven		Prajakta	Maithili	Roshan	Vishal
+Devendra	Prajakta	Maithili	Roshan	Vishal
 ---------------------------------------------------------------------
 Omkar		Rohan		Sashwat		Aryan	Devyani
 ---------------------------------------------------------------------
@@ -14,11 +16,11 @@ Mitali		Akshay		Shruti		Pratik	Ratan
 
 GT
 ---------------------------------------------------------------------
-		Pawan		Shobhit		Ankush
+Sujal		Pawan*		Shobhit*	Ankush*
 ---------------------------------------------------------------------
 Anjali		Arya		Vikas		Paritosh
 ---------------------------------------------------------------------
-Pallavi		Srijani		Mihir		Darshan
+Pallavi		Srijani*	Mihir		Darshan
 ---------------------------------------------------------------------
 Pratiksha 	Salil 		Mayuresh	
 ---------------------------------------------------------------------
@@ -116,11 +118,12 @@ URL	https://serverip:port/BankProject/addPayee/101/Suresh/BOB929292
 		2. Begin WITH the END in Mind
 		3. Put First Thing First
 
-		4.
+		4. win-win
 
-		5.
-		6.
-		7.
+		PUBLIC VICTORY
+		5. Seek First to understand, then to be understood
+		6. Synergy
+		7. Sharpen the SAW
 
 
 
@@ -560,6 +563,192 @@ OOPS Concepts
 	5. Object communication
 
 	
+
+	Person
+	|
+	Student
+	|
+	Employee
+
+				       
+				       <--Person----> 
+				       <-------------------Student------------------------>
+				       <--------------------------Employee---------------------------------------------->
+	Employee empObj = new Employee("Seema",'F',26,"Bharatee Vidyapeeth","Mech Eng",98.00,1012,"DS","Developer",250000);
+
+	equals and hashCode			 (2)
+	wait,wait,wait,notify,notifyAll		 (5)
+	finalize, clone, toStrings(), getClass   (4)
+
+			Object
+			|11 methods
+		------------
+		|
+		Person
+		|
+		Student
+		|
+		Employee
+
+	class Person // extends java.lang.Object
+	{
+		Person() {
+		  super();
+		}
+	}
+	class Student extends Person
+	{
+		Student() {
+		   super(); //default line of every ctor
+		}	
+	}
+	class Employee extends Student {
+		Employee() {
+		  super();
+		}
+	}
+
+
+this.	- points to the current class members, data/functions
+
+this()  - invokes the ctor of the current class
+
+super.  - points to the super class members, data/functions
+
+super() - invokes the ctor of the nearest super class
+
+
+
+					gender	name	age
+					-------------------------
+					|	|	|	|
+					--------------------------
+			+--------------->100
+			|
+			100
+			personObj
+
+	
+
+
+			Association
+			    |
+		--------------------------
+		|	|	|	|
+		isA	hasA	usesA	produceA
+
+
+	
+
+
+
+	hasA = composition
+
+		"a part" entity of the "whole entity"
+
+
+
+	class Engine {
+	}
+
+	class Vehicle { }
+
+	class Car extends Vehicle //isA - data type is affected, 
+			//Car is also a Vehicle now
+	{
+		Engine engineObj = new Engine(); //as a data member - hasA
+	}		//But Car is not Engine
+			// Car hasAn Engine
+
+
+	Bulb has a Filament
+
+	Ovan hasA HeatingCoil
+
+	Fridge has a Compressor
+
+	Fan hasA Motor
+
+	WashingMashine hasA WashingDrum/Tub
+
+	Human hasA Heart
+
+	vital part of the enclosing entity
+	Engine			"Car"
+	Heart			Human
+	HeatingCoil		Ovan
+
+
+	
+	Person
+	{
+		gender,age,name
+		AdhaarCard adhaarCard = new AdhaarCard();
+		Address address = new Address(); //hasA
+	}
+
+
+
+	Passing object argument/parameter
+
+	Returning Object as a return value
+
+
+
+
+	BankApplicationForm bankAppForm1 = new BankApplicationForm();
+
+
+
+					applicantName adresss	adhaarCard;panCard;mobileNumber;emailAddress;accountType;
+
+		+----------------------->100
+		|
+		100
+		bankAppForm1	
+
+	-----------------------------------------
+
+	Bank bank = new Bank();
+
+	void	applyForBankAccount(BankApplicationForm bankAppFormRef)
+	{
+		bankAppFormRef.
+	} 
+
+
+
+
+	A thought = invisible, vibration (frequency), faster than light,
+			in a non-linear way
+
+
+	A thought - or +
+
+	TEAR
+
+
+	invisible	  =   visible
+
+	unmanifested	  = manifested
+
+	Thought + Feeling = Action + Result
+	
+	frequency	  = frequency
+	
+		
+
+
+
+
+		
+
+
+
+
+
+
+
 
 
 
