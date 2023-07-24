@@ -13,4 +13,8 @@ public class Validator {
 		return (strToCheck.matches("^[a-zA-Z]*$")) ? true :false;
 	}
 	
+	static boolean checkStringWithSpace(String strToCheck) {
+		return (strToCheck.matches("^[a-zA-Z,' ']*$")) ? true :false;
+	}
+	
 }

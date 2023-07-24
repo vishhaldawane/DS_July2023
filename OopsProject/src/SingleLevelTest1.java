@@ -6,12 +6,14 @@ public class SingleLevelTest1 {
 		System.out.println("-----------------");
 		*/
 		
-		Student studentObj = new Student('M',"Jack",24,   123,"BharatiVidyapeeth","MechEng",899);
-		studentObj.showStudent();
-		/*
+		/*Student studentObj = new Student('M',"Jack",24,   123,"Bharati Vidyapeeth","Mech Eng",899);
+		studentObj.showStudent();*/
+		
+		
 		System.out.println("-----------------");
-		Employee empObj = new Employee();
-	*/
+		Employee empObj = new Employee('F',"Jane",22,   323,"MIT","IT Eng",999, 1212,"Google Inc","Brain Analyst",9999);
+
+		empObj.showEmployee();
 	}
 }
 
@@ -88,7 +90,7 @@ class Student extends Person {
 			throw runtimeRollNumberEx;
 		}
 		
-		if(Validator.checkString(collegeName)) {
+		if(Validator.checkStringWithSpace(collegeName)) {
 			this.collegeName = collegeName;
 		}
 		else {
@@ -96,7 +98,7 @@ class Student extends Person {
 			throw runtimeNameEx;
 		}
 		
-		if(Validator.checkString(stream)) {
+		if(Validator.checkStringWithSpace(stream)) {
 			this.stream = stream;
 		}
 		else {
@@ -114,7 +116,6 @@ class Student extends Person {
 		}
 		
 
-		this.totalMarks = totalMarks;
 	}
 	
 	void showStudent() {
@@ -132,9 +133,55 @@ class Employee extends Student {
 	private String designation;
 	float salary;
 	
-	
-	Employee() {
-		super();
+	Employee(char gender, String name, int age, int rollNumber,String collegeName, String stream, float totalMarks,int empno, String companyName, String designation, float salary) {
+		super( gender,  name,  age,  rollNumber, collegeName,  stream,  totalMarks);
 		System.out.println("Employee() ctor...");
+		
+		if(Validator.checkNumber(empno, 100, 2000)) {
+			this.empno = empno;			
+		}
+		else {
+			RuntimeException runtimeEmpnoEx = new RuntimeException("Invalid empno : "+empno);
+			throw runtimeEmpnoEx;
+		}
+		
+		if(Validator.checkStringWithSpace(companyName)) {
+			this.companyName = companyName;
+		}
+		else {
+			RuntimeException runtimeCompanyNameEx = new RuntimeException("Invalid companyName : "+companyName);
+			throw runtimeCompanyNameEx;
+		}
+		
+		if(Validator.checkStringWithSpace(designation)) {
+			this.designation = designation;
+		}
+		else {
+			RuntimeException runtimeDesignationEx = new RuntimeException("Invalid designation : "+designation);
+			throw runtimeDesignationEx;
+		}
+		
+
+		if(Validator.checkNumber(salary, 5000, 20000)) {
+			this.salary = salary;			
+		}
+		else {
+			RuntimeException runtimeSalaryEx = new RuntimeException("Invalid salary : "+salary);
+			throw runtimeSalaryEx;
+		}
+	}
+	
+	void showEmployee() {
+		super.showStudent(); //super. to invoke super class member/data/function
+		System.out.println("---- EMPLOYEE ----");
+		System.out.println("EMPNO  : "+empno);
+		System.out.println("COMPANY: "+companyName);
+		System.out.println("DESG   : "+designation);
+		System.out.println("SALARY : "+salary);
 	}
 }
+
+
+
+
+
