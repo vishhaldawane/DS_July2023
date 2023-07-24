@@ -52,6 +52,31 @@ public class BankTest {
 		bankAcc2.bankAccountDetails();	
 		bankAcc3.bankAccountDetails();	
 		
+		System.out.println("=============================");
+
+		BankApplicationForm bankForm1 = new BankApplicationForm();
+		BankApplicationForm bankForm2 = new BankApplicationForm();
+	
+		bankForm1.setApplicantName("Dinesh Sawant");
+		bankForm1.setAdhaarCard("125612451289");
+		bankForm1.setPanCard("DINJD2233D");
+		bankForm1.setEmailAddress("dinesh@gmail.com");
+		bankForm1.setMobileNumber("6688443464");
+		bankForm1.setAdress("D21, Sai Niwas, Pune 30");
+		bankForm1.setAccountType("Savings");
+		
+		bankForm2.setApplicantName("Disha Sawant");
+		bankForm2.setAdhaarCard("555589901289");
+		bankForm2.setPanCard("DIAS1133E");
+		bankForm2.setEmailAddress("disha@gmail.com");
+		bankForm2.setMobileNumber("5588663464");
+		bankForm2.setAdress(bankForm1.getAdress());
+		bankForm2.setAccountType(bankForm1.getAccountType());
+		
+		BankAccount jointAcc = bank.applyForJointAccount(bankForm1, bankForm2);
+		jointAcc.bankAccountDetails();
+		
+		
 	}
 	
 }
@@ -134,6 +159,8 @@ class BankAccount
 	private long accountBalance;
 	private String accountType;
 	private String ifscCode;
+	private String operationType; // single, partnership, joint, firm, 
+	
 	public long getAccountNumber() {
 		return accountNumber;
 	}
@@ -165,6 +192,14 @@ class BankAccount
 		this.ifscCode = ifscCode;
 	}
 	
+	
+	
+	public String getOperationType() {
+		return operationType;
+	}
+	public void setOperationType(String operationType) {
+		this.operationType = operationType;
+	}
 	void bankAccountDetails() {
 		System.out.println("-------Bank Account Details -------");
 		System.out.println("Account Number      : "+accountNumber);
@@ -172,6 +207,8 @@ class BankAccount
 		System.out.println("Account Holder      : "+accountHolder);
 		System.out.println("Bank Account IFSC   : "+ifscCode);
 		System.out.println("Account Balance     : "+accountBalance);
+		System.out.println("Account Operation   : "+operationType);
+
 		
 	}
 	
@@ -193,8 +230,24 @@ class Bank
 		bankAccObj.setAccountType(bankAppFormRef.getAccountType());
 		bankAccObj.setIfscCode("BOB000000015");
 		bankAccObj.setAccountBalance(3000);
-		
+		bankAccObj.setOperationType("Single");
 		return bankAccObj;
+	}
+	
+	BankAccount applyForJointAccount(BankApplicationForm form1, BankApplicationForm form2) {
+		//gather both the form details and make the bankAccount details
+		BankAccount bankAcc = new BankAccount();
+
+		double value = Math.random() * 100;
+		long accNum = (long) value;
+		bankAcc.setAccountNumber(accNum);//real time, connect to the DB, and find out the last account number generated, and one 
+		bankAcc.setAccountHolder(form1.getApplicantName()+" "+form2.getApplicantName());
+		bankAcc.setAccountType(form1.getAccountType());
+		bankAcc.setIfscCode("BOB000000015");
+		bankAcc.setAccountBalance(5000);
+		bankAcc.setOperationType("Joint");
+		return bankAcc;
+		
 	}
 }
 
