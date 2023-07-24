@@ -1,31 +1,131 @@
+import java.time.LocalDate;
 
 public class SingleLevelTest1 {
 	public static void main(String[] args) {
-		/*Person personObj = new Person(24);
+		
+		AdhaarCard adhaarCard1 = new AdhaarCard();
+		adhaarCard1.setAdhaarNumber("1231 2312 3123");
+		adhaarCard1.setAddress("C 709, West Avenue, Mumbai 16");
+		adhaarCard1.setNameOnAdhaar("Peter Dsouza");
+		adhaarCard1.setFatherName("Patrick Dsouza");
+		adhaarCard1.setDateOfBirth(LocalDate.of(2002, 3, 25));
+		adhaarCard1.setMobileNumber("9870445533");
+		
+		AdhaarCard adhaarCard2 = new AdhaarCard();
+		adhaarCard2.setAdhaarNumber("9820 2312 3123");
+		adhaarCard2.setAddress("D 909, East Avenue, Nagpur 16");
+		adhaarCard2.setNameOnAdhaar("Dinesh Sawant");
+		adhaarCard2.setFatherName("Guru Sawant");
+		adhaarCard2.setDateOfBirth(LocalDate.of(2003, 12, 15));
+		adhaarCard2.setMobileNumber("8899445533");
+
+
+		AdhaarCard adhaarCard3 = new AdhaarCard();
+		adhaarCard3.setAdhaarNumber("1231 5312 6123");
+		adhaarCard3.setAddress("D22, Ram Mahal, Pune 333");
+		adhaarCard3.setNameOnAdhaar("Satish Kulkarni");
+		adhaarCard3.setFatherName("Shyam Kulkarni");
+		adhaarCard3.setDateOfBirth(LocalDate.of(2000, 7, 29));
+		adhaarCard3.setMobileNumber("8870445511");
+		
+		
+		Person personObj = new Person( 'M',"Peter",24, adhaarCard1);
+		
 		personObj.showPerson();
 		System.out.println("-----------------");
-		*/
 		
-		/*Student studentObj = new Student('M',"Jack",24,   123,"Bharati Vidyapeeth","Mech Eng",899);
-		studentObj.showStudent();*/
 		
+		Student studentObj = new Student('M',"Dinesh Sawant",24,   123,"Bharati Vidyapeeth","Mech Eng",899);
+		studentObj.setAdhaarCard(adhaarCard2);
+		studentObj.showStudent();	
 		
 		System.out.println("-----------------");
+		
+		
 		Employee empObj = new Employee('F',"Jane",22,   323,"MIT","IT Eng",999, 1212,"Google Inc","Brain Analyst",9999);
-
+		empObj.setAdhaarCard(adhaarCard3);
 		empObj.showEmployee();
 	}
 }
 
-
+class AdhaarCard
+{
+	private String adhaarNumber;
+	private String nameOnAdhaar;
+	private LocalDate dateOfBirth;
+	private String address;
+	private String mobileNumber;
+	private String fatherName;
+	
+	public String getAdhaarNumber() {
+		return adhaarNumber;
+	}
+	public void setAdhaarNumber(String adhaarNumber) {
+		this.adhaarNumber = adhaarNumber;
+	}
+	public String getNameOnAdhaar() {
+		return nameOnAdhaar;
+	}
+	public void setNameOnAdhaar(String nameOnAdhaar) {
+		this.nameOnAdhaar = nameOnAdhaar;
+	}
+	public LocalDate getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(LocalDate dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+	public String getFatherName() {
+		return fatherName;
+	}
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
+	}
+	
+	void printAdhaarCard() {
+		System.out.println("-----ADHAAR CARD INFO -----");
+		System.out.println("Adhaar Number  : "+adhaarNumber);
+		System.out.println("Adhaar Name    : "+nameOnAdhaar);
+		System.out.println("Adhaar Address : "+address);
+		System.out.println("Birthdate      : "+dateOfBirth);
+		System.out.println("Father Name    : "+fatherName);
+		System.out.println("Mobile Number  : "+mobileNumber);
+		
+	}
+	
+	
+}
 class Person {
 	private char gender;
 	private String name;
 	private int age;
+	private AdhaarCard adhaarCard; // is it a reference ???YES
 	
+	
+	public AdhaarCard getAdhaarCard() {
+		return adhaarCard;
+	}
+
+	public void setAdhaarCard(AdhaarCard adhaarCard) {
+		this.adhaarCard = adhaarCard;
+	}
+
 	Person() {
 		System.out.println("Person() ctor....");
 	}
+	
 	
 	Person(int age) {
 		this('F',"NONAME",age); //invoking ctor of the same class - reuse
@@ -34,6 +134,13 @@ class Person {
 		System.out.println("FINISH=> Person(int)");*/
 		
 	}
+	
+	Person(char gender, String name, int age,AdhaarCard adhaarRef) {
+		this(gender,name,age);
+		System.out.println("START=> Person(char,String,int,AdhaarCard) ctor....");	
+		this.adhaarCard = adhaarRef;
+	}
+	
 	Person(char gender, String name, int age) {
 		System.out.println("START=> Person(char,String,int) ctor....");		
 		
@@ -47,7 +154,7 @@ class Person {
 			throw runtimeGenderEx;
 		}
 		
-		if(Validator.checkString(name)) {
+		if(Validator.checkStringWithSpace(name)) {
 			this.name = name;
 		}
 		else {
@@ -70,6 +177,12 @@ class Person {
 		System.out.println("GENDER : "+gender);
 		System.out.println("NAME   : "+name);
 		System.out.println("AGE    : "+age);
+		if(adhaarCard!=null) {
+			adhaarCard.printAdhaarCard();
+		}
+		else {
+			System.out.println("Adhaar Card NOT set");
+		}
 	}
  }
 class Student extends Person {
