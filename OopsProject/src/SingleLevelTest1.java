@@ -1,17 +1,15 @@
 
 public class SingleLevelTest1 {
 	public static void main(String[] args) {
-		Person personObj = new Person(24);
-		
+		/*Person personObj = new Person(24);
 		personObj.showPerson();
-		
-		
-	/*	System.out.println("-----------------");
-		
-		Student studentObj = new Student();
-		
 		System.out.println("-----------------");
+		*/
 		
+		Student studentObj = new Student('M',"Jack",24,   123,"BharatiVidyapeeth","MechEng",899);
+		studentObj.showStudent();
+		/*
+		System.out.println("-----------------");
 		Employee empObj = new Employee();
 	*/
 	}
@@ -47,7 +45,7 @@ class Person {
 			throw runtimeGenderEx;
 		}
 		
-		if(name.matches("^[a-zA-Z]*$")) {
+		if(Validator.checkString(name)) {
 			this.name = name;
 		}
 		else {
@@ -77,10 +75,55 @@ class Student extends Person {
 	private String collegeName;
 	private String stream;
 	private float totalMarks;
-	
-	
-	Student() {
+		
+	Student(char gender, String name, int age, int rollNumber,String collegeName, String stream, float totalMarks) {
+		super(gender,name,age); //REUSE THE ctor OF THE PARENT
 		System.out.println("Student() ctor...");
+		
+		if(Validator.checkNumber(rollNumber, 1, 500)) {
+			this.rollNumber = rollNumber;			
+		}
+		else {
+			RuntimeException runtimeRollNumberEx = new RuntimeException("Invalid Roll Number : "+rollNumber);
+			throw runtimeRollNumberEx;
+		}
+		
+		if(Validator.checkString(collegeName)) {
+			this.collegeName = collegeName;
+		}
+		else {
+			RuntimeException runtimeNameEx = new RuntimeException("Invalid collegeName : "+collegeName);
+			throw runtimeNameEx;
+		}
+		
+		if(Validator.checkString(stream)) {
+			this.stream = stream;
+		}
+		else {
+			RuntimeException runtimeNameEx = new RuntimeException("Invalid stream : "+stream);
+			throw runtimeNameEx;
+		}
+		
+
+		if(Validator.checkNumber(totalMarks, 1, 1000)) {
+			this.totalMarks = totalMarks;			
+		}
+		else {
+			RuntimeException runtimeMarksEx = new RuntimeException("Invalid Marks : "+totalMarks);
+			throw runtimeMarksEx;
+		}
+		
+
+		this.totalMarks = totalMarks;
+	}
+	
+	void showStudent() {
+		super.showPerson(); //super. to invoke super class member/data/function
+		System.out.println("---- STUDENT ----");
+		System.out.println("ROLLNO : "+rollNumber);
+		System.out.println("COLLGE : "+collegeName);
+		System.out.println("STREAM : "+stream);
+		System.out.println("MARKS  : "+totalMarks);
 	}
 }
 class Employee extends Student {
