@@ -1,0 +1,25 @@
+
+public class SingleLevelTest1 {
+	public static void main(String[] args) {
+		Person personObj = new Person();
+		System.out.println("-----------------");
+		Student studentObj = new Student();
+		System.out.println("-----------------");
+		Employee empObj = new Employee();
+	}
+}
+class Person {
+	Person() {
+		System.out.println("Person() ctor....");
+	}
+}
+class Student extends Person {
+	Student() {
+		System.out.println("Student() ctor...");
+	}
+}
+class Employee extends Student {
+	Employee() {
+		System.out.println("Employee() ctor...");
+	}
+}

@@ -1,0 +1,56 @@
+
+public class ClassExtensionTest {
+
+	public static void main(String[] args) {
+		
+		//Doctor       x = new Doctor();
+		//x.diagnose();
+		
+		Surgeon 	 x = new Surgeon();
+		x.diagnose();
+		
+//		HeartSurgeon x = new HeartSurgeon();
+		
+		if(x instanceof Doctor) {
+			System.out.println("Its a Doctor's object");
+		}
+		else {
+			System.out.println("Its not a Doctor's object");
+		}
+		
+		System.out.println("-----------");
+
+		if(x instanceof Surgeon) {
+			System.out.println("Its a Surgeon's object");
+		}
+		else {
+			System.out.println("Its not a Surgeon's object");
+		}
+		
+		System.out.println("-----------");
+
+		if(x instanceof HeartSurgeon) {
+			System.out.println("Its a HeartSurgeon's object");
+		}
+		else {
+			System.out.println("Its not a HeartSurgeon's object");
+		}
+	}
+
+}
+class Doctor {
+	void diagnose() { //1.exclusive to Doctor
+		System.out.println("Doctor: is diagnosing...ENT checkup....");
+	}
+}
+class Surgeon extends Doctor {
+	//2. Doctor's dignose() is inherited to Surgeon 
+	
+	void diagnose() {
+		System.out.println("Surgeon: is diagnosing...CT Scan/MRI Scan....");
+
+	}
+}
+class HeartSurgeon extends Surgeon {
+	
+}

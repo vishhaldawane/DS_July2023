@@ -1,0 +1,15 @@
+
+public class TigerTest {
+	public static void main(String[] args) {
+		
+		Tiger tiger = new Tiger();
+		tiger.jump();
+	}
+}
+
+class Tiger
+{
+	void jump() {
+		System.out.println("Tiger is jumping...");
+	}
+}

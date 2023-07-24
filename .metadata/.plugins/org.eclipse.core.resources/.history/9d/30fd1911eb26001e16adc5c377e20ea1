@@ -1,0 +1,38 @@
+package jungle.tree;
+
+import jungle.cave.Tiger;
+
+class Bear //NON-HCILD
+{
+	void huntHoney() {
+		Tiger tiger = new Tiger();
+		tiger.privateMethodA(); // NEVER-EVER
+		tiger.protectedMethodB();//same cave, trust factor broken due to diff package
+		tiger.defaultMethodD();//diff package 
+		tiger.publicMethodC(); //EVERYWHERE
+	}
+}
+class WhiteTiger extends Tiger //child - in DIFF PACKAGE
+{
+	void roaming(Tiger tiger) {
+		tiger.defaultMethodD();
+		tiger.protectedMethodB();
+		tiger.privateMethodA();//NEVER
+		tiger.publicMethodC();//ALWAYS
+	}
+	
+	void roaming() {
+		
+		super.defaultMethodD();
+		super.protectedMethodB();
+		super.privateMethodA();//NEVER
+		super.publicMethodC();//ALWAYS
+		
+		Tiger tiger = new Tiger();
+		tiger.privateMethodA(); // NEVER-EVER
+		tiger.protectedMethodB();//same cave, trust factor broken due to diff package
+		tiger.defaultMethodD();//diff package 
+		tiger.publicMethodC(); //EVERYWHERE
+		
+	}
+}

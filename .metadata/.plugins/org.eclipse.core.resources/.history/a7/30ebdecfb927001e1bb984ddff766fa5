@@ -1,0 +1,23 @@
+
+public class SingleLevelTest {
+	public static void main(String[] args) {
+	
+		Point2D p2d = new Point2D(100,200);
+		p2d.showPoint();
+	}
+}
+
+class Point2D
+{
+	private int x;
+	private int y;
+	
+	Point2D(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	void showPoint() {
+		System.out.println("x : "+x);
+		System.out.println("y : "+y);
+	}
+}

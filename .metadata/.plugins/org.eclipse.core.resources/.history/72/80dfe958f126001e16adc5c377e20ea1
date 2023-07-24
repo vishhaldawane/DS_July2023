@@ -1,0 +1,10 @@
+
+public class DataTypeTest {
+	public static void main(String[] args) {
+		
+		byte rollNumber=129;
+		
+		System.out.println("rollNumber : "+rollNumber);
+		
+	}
+}

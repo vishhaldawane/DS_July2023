@@ -1,0 +1,27 @@
+package jungle.cave; //belongs to
+
+class Bear
+{
+	void huntHoney() {
+		Tiger tiger = new Tiger();
+		tiger.privateMethodA();
+		tiger.protectedMethodB();//same cave, trust factor within the package, even a non-child can access
+		tiger.defaultMethodD();//same cave
+		tiger.publicMethodC();
+	}
+}
+public class Tiger {
+	
+	private void privateMethodA() {
+		System.out.println("Tiger is privateMethodA...");
+	}
+	protected void protectedMethodB() {
+		System.out.println("Tiger is protectedMethodB....");
+	}
+	public void publicMethodC() {
+		System.out.println("Tiger is publicMethodC...");
+	}
+	void defaultMethodD() { //available to default package
+		System.out.println("Tiger is defaultMethodD..");
+	}
+}

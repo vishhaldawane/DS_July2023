@@ -1,0 +1,29 @@
+
+public class OverridingTest {
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.farming();
+		
+	}
+
+}
+class GrandFather
+{
+	void farming() {
+		System.out.println("GrandFather: farming in traditional style...using bull...plough....");
+	}
+}
+class Father extends GrandFather
+{
+	void farming() {
+		System.out.println("Father: farming in new style...using tractor.......");
+	}
+}
+class Child extends Father
+{
+	void farming() {
+		System.out.println("Child: farming in new style...using robotic tractor.......");
+	}
+}

@@ -1,0 +1,76 @@
+
+public class SingleLevelTest1 {
+	public static void main(String[] args) {
+		Person personObj = new Person('F',"Seema",224);
+		
+		personObj.showPerson();
+		
+		
+	/*	System.out.println("-----------------");
+		
+		Student studentObj = new Student();
+		
+		System.out.println("-----------------");
+		
+		Employee empObj = new Employee();
+	*/
+	}
+}
+
+
+class Person {
+	private char gender;
+	private String name;
+	private int age;
+	
+	Person() {
+		System.out.println("Person() ctor....");
+	}
+	Person(char gender, String name, int age) {
+		System.out.println("START=> Person(char,String,int) ctor....");		
+		
+		if(gender=='M' || gender=='F') {
+			this.gender = gender;
+		}
+		else {
+			//System.out.println("Invalid Gender...");
+			//throw new RuntimeException("Invalid gender.....");
+			RuntimeException runtimeEx = new RuntimeException("Invalid gender : "+gender);
+			throw runtimeEx;
+		}
+		this.name = name;
+		this.age = age;
+		
+		System.out.println("FINISH=> Person(char,String,int) ctor....");		
+
+	}
+	void showPerson() {
+		System.out.println("---- PERSONAL ----");
+		System.out.println("GENDER : "+gender);
+		System.out.println("NAME   : "+name);
+		System.out.println("AGE    : "+age);
+	}
+ }
+class Student extends Person {
+	private int rollNumber;
+	private String collegeName;
+	private String stream;
+	private float totalMarks;
+	
+	
+	Student() {
+		System.out.println("Student() ctor...");
+	}
+}
+class Employee extends Student {
+	private int empno;
+	private String companyName;
+	private String designation;
+	float salary;
+	
+	
+	Employee() {
+		super();
+		System.out.println("Employee() ctor...");
+	}
+}
