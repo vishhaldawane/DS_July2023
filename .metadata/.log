@@ -5878,3 +5878,75 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:33:56.264
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WWPIoarP
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:33:56.267
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.WWPIoarP
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:33:56.269
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:33:56.271
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WWPIoarP => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:07.528
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:07.529
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@7c3f4a62[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=552)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:07.530
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.444
+!MESSAGE Boot LS startup time from start to initialized: 3913ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.652
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.grtEPPsxisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.653
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.653
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.654
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.658
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.grtEPPsx => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.661
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.666
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.667
+!MESSAGE buffering callback sts4.classpath.grtEPPsx OopsProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.674
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.675
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.676
+!MESSAGE buffering callback sts4.classpath.grtEPPsx BankingProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.676
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.677
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.678
+!MESSAGE buffering callback sts4.classpath.grtEPPsx JungleProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:11.679
+!MESSAGE executing callback sts4.classpath.grtEPPsx 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-24 12:34:12.222
+!MESSAGE executing callback sts4.classpath.grtEPPsx SUCCESS [done]
