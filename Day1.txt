@@ -1,3 +1,4 @@
+:w
 
 82877658968
 104673
@@ -16,14 +17,56 @@ Mitali		Akshay		Shruti		Pratik	Ratan
 
 GT
 ---------------------------------------------------------------------
-Sujal		Pawan*		Shobhit*	Ankush*
+Anjali		Pawan*		Shobhit*	Ankush*
 ---------------------------------------------------------------------
-Anjali		Arya		Vikas		Paritosh
+Sujal		Arya		Vikas		Paritosh
 ---------------------------------------------------------------------
 Pallavi		Srijani*	Mihir		Darshan
 ---------------------------------------------------------------------
 Pratiksha 	Salil 		Mayuresh	
 ---------------------------------------------------------------------
+
+MPR
+------
+Mitali
+Shruti
+Ratan
+Aryan
+Rohan
+Omkar
+Devendra
+Vishal
+Devyani
+Maithili
+Nikhil
+Kunal
+Pushpendra
+-------------
+
+Bengaluru
+-------
+
+GT
+-----
+
+Pallavi
+Sujal
+Mihir
+Vikas
+Darshan
+
+
+
+ git init
+  419  git add .
+  420  git commit -m "my first add"
+  421  git status
+  422  git remote add origin https://github.com/vishhaldawane/JavaMay2023.git
+  423  git push origin master
+
+
+
+
 
 				who
 				|role? 
@@ -741,8 +784,226 @@ super() - invokes the ctor of the nearest super class
 
 
 
+--------------------------------------------------------------------
+		static		final		abstract
+--------------------------------------------------------------------
+field		shared across   cannot be		X
+		all the objects changed/
+		of a class	constant
+--------------------------------------------------------------------
+method		to deal with	cannot be	
+		static data	overridden
+		/ functions
+--------------------------------------------------------------------
+class		inner classes	cannot be
+				extended
+--------------------------------------------------------------------
+					
+
+Method overriding : concept of instance's methods
+		  plus + accessible methods
+
+class Kite
+{
+	static void fun() { }
+        private void fly() { }
+}
+class ChineseKite extends Kite
+{
+	static void fun() { }
+	private void fly() { }
+}
+
+ChineseKite ck = new ChineseKite();
+ck.fly();
+ck.fun();
+Kite.fun();
+ChineseKite.fun();
+
+
+
+
+
+
+			
+				Kite (red)
+	Kite (blue)		|
+	|			|			Kite
+	|50m			|60m			|
+	|			|			|49m
+	Person			Person			Person
+	(Salil)			(Sujal)			(Ratan)
+
+
+Kite				Kite			Kite
+ |				|			|
+ color, length, owner		color, length, owner	color,length,owner
+	FIELD			 FIELD			FIELD
+			
+Vishhal
+FIELD : kiteCount:0
+
+		STATIC MEMBERS				NON-STATIC MEMBERS
+		|					|
+		Class's Members		vs		Instance's members
+		|					|
+		kiteCount				color,length,owner
+
+		showKiteCount(){}			showKite(){}
+							k1.kiteFight(k2)
+
+
+		can be referred
+		with the help of 
+		ClassName.memeberName
+
+		Kite.showKite();			k1.showKite();
+							k2.showKite();
+							k3.showKite();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 
+
+
+	abstract class GeometricalShape
+	{
+		abstract void draw();
+		abstract void calcArea();
+		abstract void calcPerimeter();
+	}
+
+	- in reality there is no such shape known as GeometricalShape
+
+	- so what is it?
+
+	- it is always a parent
+	
+	- abstract class meant for inheritance
+
+	- it is the partial contract of a class
+
+
+			symmetry across all the children
+
+				GeometricalShape
+				|calcArea(); <-- abstract function | method without code body
+			-------------------------------------
+			|		|		|
+			Square		Circle		Triangle
+			|length		|radius
+			|calcArea(){}	|calcArea(){}	calcArea(){}
+			|		|
+			Rectangle	Ellipse
+			|breadth	|verticalRadius
+
+
+
+	- instance of abstract class cannot be created
+
+	- but reference to it can be created
+
+
+
+
+
+
+	interface
+
+
+		- pure abstract class
+		
+		- a class only with partial contracts
+
+		- it cannot have methods with body
+
+		- by default all methods are public and abstract
+
+		- by default all fields are public static and final
+
+	interface Shape {
+		void draw(); //abstract | by default
+	}
+
+	abstract class GeometricalShape <-- contains partial contract
+	{
+		abstract void calcArea(); <-- partial contract
+	}
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	take the paper and pen
+
+	1. on the floor draw a circle using ur RIGHT toe in clockwise 
+	2. on the paper type 6 in anticlockwise using RIGHT hand
+
+e
+
+
+
+
+1										    Instrument
+								    			|use();
+						------------------------------------------------------------------------------------------------------------------------------------------------------
+						|								|						|				|
+2					MusicalInstrument							MedicalInstrument			ElectronicInstrument		MeasuringInstrument	ElectricalInstrument	MechanicalInstrument  OpticalInstrument	 .......
+						|play();							|operate();					
+			------------------------------------------------------------			-----------------------------------
+			|			|				|			|				|		
+3	StringBasedMusicalInstrument	AirBasedMusicalInstrument	DrumBasedMusicalInstrument	SurgicalInstrument	PathologicalInstrument
+	    |tuneStrings();			 |blowAir();			|tuneSurface();			|sterile()		|reader()
+	----------------		--------------------		-----------------------		------------------	------------------------
+	|	|			|	 |			|		|		|		|	|		|
+4	Guitar	Violin			Flute	Harmonium		Tabla		Dhol	SurgicalCutter  SurgicalNeedle Glucometer   ECGMachine
+	|pluck()  |bowing()
+5	Electronic| Cello
+	Guitar	  |longBowing();
+	|preset();
+
+
+
+
+
+
+
+
+
+
+
+	
+		
 
 
 
