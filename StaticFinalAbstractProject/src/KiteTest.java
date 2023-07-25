@@ -100,12 +100,6 @@ class Kite {
 		}
 	
 	}
-
-	
-	
-	
-	
-	
 	@Override
 	public String toString() {
 		return "Kite [owner=" + owner + ", color=" + color + ", length=" + length + "]";
