@@ -1,7 +1,19 @@
-
+class SavingsAccount
+{
+	private float balance;
+	
+	void setBalance(float bal) {
+		//logic to crossverify bal before setting to balance
+		balance = bal;
+	}
+}
 public class FinalFieldTest {
 	public static void main(String[] args) {
 		
+		SavingsAccount sav = new SavingsAccount();
+		//sav.balance=99999999;
+		
+		sav.setBalance(9999999);
 		
 		//final float PI=3.14f; // local variable of main
 		//System.out.println("PI "+PI);
@@ -27,6 +39,8 @@ public class FinalFieldTest {
 		car2.showCar();
 		car3.showCar();
 		
+		car1.setCar("bluecyan", "MH-12-1233");
+		
 		
 	}
 }
@@ -34,7 +48,7 @@ public class FinalFieldTest {
 class Car
 {
 	private String color;
-	private final String numberPlate;
+	private final String numberPlate;//="MH-12-0000";
 	
 	Car(String c, String np) {
 		color = c;
@@ -53,12 +67,14 @@ class Car
 class Circle
 {
 	private float radius;
-	private final float PI=3.14f; // UNIVERSAL CONSTANT | data member | one copy
+	private final static float PI=3.14f; // UNIVERSAL CONSTANT | data member | one copy
 	
 	public Circle(float radius) {
 		super();
 		this.radius = radius;
 	}
+	
+	
 
 	@Override
 	public String toString() {
