@@ -10,15 +10,25 @@ public class CustomExceptionTest {
 		}
 		catch(CarKeyNotFoundException ex1) {
 			System.out.println("Key Issue : "+ex1);
+		} 
+		catch (CarBatteryDownException ex2) {
+			System.out.println("Battery Issue : "+ex2);
 		}
 		System.out.println("\nMAIN finished...\n");
 		
 	}
 }
 
-class CarKeyNotFoundException extends Exception
+class CarKeyNotFoundException extends Exception //checked
 {
 	CarKeyNotFoundException(String msg) {
+		super(msg);
+	}
+}
+
+class CarBatteryDownException extends Exception //checked
+{
+	CarBatteryDownException(String msg) {
 		super(msg);
 	}
 }
@@ -29,16 +39,36 @@ class RedSignalDishnouredException extends RuntimeException
 	}
 }
 
+class TyrePuncturedException extends RuntimeException
+{
+	TyrePuncturedException(String msg) {
+		super(msg);
+	}
+}
+
 class Car
 {
 	boolean keyFound=false;
+	boolean carBatteryFunctioning=true;
 	
-	Car() throws CarKeyNotFoundException
+	Car() throws CarKeyNotFoundException, CarBatteryDownException
 	{
 		double value = Math.random()%10;
 		
-		if(value>=0.80) {
+		if(value>=0.50) {
 			keyFound=true;
+		}
+		
+		if(value<0.10) {
+			carBatteryFunctioning=false;
+		}
+		else {
+			System.out.println("Car Battery is FINE...!!!");
+		}
+		
+		if(carBatteryFunctioning==false) {
+			CarBatteryDownException ex = new CarBatteryDownException("Car Battery is out of order...");
+			throw ex;
 		}
 		
 		if(keyFound==true) {
@@ -55,10 +85,15 @@ class Car
 		for (int i = 1; i <=30; i++) {
 			System.out.println(i+" kms driven....");
 			double value = Math.random()%10;
-			if(value>0.95) {
+			if(value>0.96) {
 				RedSignalDishnouredException ex1 = new RedSignalDishnouredException("Oh No!!! Red signal is dishonoured....");
 				throw ex1;
 			}
+			else if(value>0.65 && value <=0.70) {
+				TyrePuncturedException ex1 = new TyrePuncturedException("Oh No!!! tyre got punctured.......");
+				throw ex1;
+			}
+			
 		}
 	}
 }
