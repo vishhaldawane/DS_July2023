@@ -994,16 +994,371 @@ e
 
 
 
+	interface Flying {
+		void fly();
+	}
+	interface Landing {
+		void land();
+	}
 
-
-
-
-
-
-
-
-	
+	abstract class Flight {
 		
+	}
+	class CommercialFlight extends Flight implements Flying, Landing {
+		
+	}
+
+	The word water is not WATER
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Exception handling
+
+		- Excpetion = runtime error in the program
+
+
+				Errors
+				|
+		----------------------------------
+		|	|	|	  |	 |
+		syntax library	runtime  fatal logical
+		|	|	 |	  |	   |
+	compile-time  missing  EXCEPTION -memory   4+4=16
+
+
+		      files		 -disk
+
+		
+if a function is throwing checked exceptions
+then it is mandatory to handle via try and catch
+
+
+a function can "throw" checked exception only 
+after a "throws" clause declaration
+
+
+class Bank
+{
+	void fun() {
+
+		try {
+
+			3 lines for fund transfer
+
+			5 lines for account openining
+
+			8 lines for statment printing
+
+		}
+		catch() { }
+		catch() { }
+
+		catch() { }
+		catch() { }
+		catch() { }
+
+		catch() { }
+		catch() { }
+		catch() { }
+		catch() { }
+		catch() { }
+
+	}
+
+}
+class A { // Ratan
+
+	void fun() throws Exception [ mandatory since it is checked ]
+	{
+		
+		throw new Exception();
+	}
+	void foo() <-- throws is not mandatory [ since it is unchecked] 
+	{
+		
+		throw new RuntimeException();
+	}
+}
+
+class Something { //Shruti
+
+	main() {
+	
+		A a = new A();
+		a.fun(); //<-- this line must be surrounded by try catch
+
+		a.foo(); // need not be surrounded by try catch
+	}
+}
+
+if a function is throwing unchecked exceptions
+then it is not mandatory to handle via try and catch
+
+
+				Object
+				|
+			--------------------
+			|
+			Throwable
+			|
+		-----------------
+		|		|	
+		Error		Exception
+	non-catchable		|catchable
+				| all children (except RuntimeException)
+				|	are checked type
+		----------------------------------
+		|		|		|
+	RuntimeException	IOException	SQLException
+		|(unchecked)		|
+--------------------------	FileNotFoundException
+|		   | |
+ArithmeticException| NullPointerException
+	IndexOutOfBoundsException
+		   |
+	--------------------------
+	|			 |
+ArrayIndexOutOfBoundsException StringIndexOutOfBoundsException
+
+
+
+
+
+
+
+
+
+			try
+			{
+				code
+			}
+			catch(......) { }
+			catch(.....) { }
+			catch(.....) { }
+		
+
+
+
+
+
+
+
+
+	void fundTransfer(src,trg,amt)
+	{
+
+		1. if(trg acc exists)
+		2. 	if(src acc exists)
+		3. 		if (src bal > amt)
+		4.     			src withdraw
+		5.			trg deposit
+		6.		else
+		7.			insuff bal at src
+		8.	else
+		9.		src not exists
+		10. else
+		11.	trg not exists
+	}
+
+
+	void fundTransfer(src,trg,amt)
+	{
+		try {
+		1	check trg exist
+		2	check src exist
+		3	check src bal > amt
+		4	src withdraw
+		5	trg deposit
+		}
+		catch(if trg not found) {
+		6 -> show err
+		}
+		catch(if src not found) {
+		7 -> show err
+		}
+		catch(if scr bal insuff) {
+		8 -> show err
+		}
+
+	}
+
+
+
+	checked			vs		unchecked
+	|					|
+	checked by the compiler			ignored by the compiler
+						only found at runtime
+
+
+	longDrive()
+	
+
+
+kill -9 PID
+
+	try
+	{
+		allocate resource1
+		allocate resource2
+		allocate resource3
+		allocate resource4
+		code1
+		code2
+		code3
+
+	}
+	catch() { 
+		logic
+		System.exit(0);
+	}
+	finally {
+
+		de-allocate resource1
+		de-allocate resource2
+		de-allocate resource3
+		de-allocate resource4
+	}
+
+
+
+
+	Custom Exception | User defined exception
+
+
+		checked?	or Unchecked ?
+
+	class Car
+	{
+
+	} 
+		
+
+-----------------
+Thread = series of statements
+
+
+Bank Records
+----------
+acno	name	balance
+101	Suresh	50000
+102	Dinesh  60000
+103	Ramesh  90000
+104	Rajesh ..
+105	Ritesh ..
+
+			Cash Deposit Counter
+
+		Teller1		Teller2		Teller3
+		|		|		|
+		getBal(103)	getBal(103)	getBal(103)
+		| 70000		|		|
+		calcAmt		calcAmt		calcAmt
+		| 75000		|		|
+		setBal(103)	setBal()	setBal()
+		| 75000		|		|
+		Customer1	Customer2	Customer3
+cash		5000/-		7000/-		8000/-
+ac/no		103		104		105
+deno		100/-Rs 	50/-		2000/-
+cnt		50		140		4
+time		10:30		10:30		10:30
+
+
+		Customer2
+		Customer3..
+	
+
+
+
+
+		<Eatable>
+		|eat()
+		|
+	--------+--------
+	|		|implements	
+	FoodItem	|	 Stone		
+	|eat(){}	|	 |
+	|start(){}	-------+ |
+	|		       | | extends
+	Pizza		      Chalk
+	eat(){}			eat(){}//mandate
+
+
+	Pizza pizza = new Pizza();
+	pizza.start();
+
+	Chalk chalk = new Chalk();
+	FoodItem food = new FoodItem(chalk);
+	food.start(); //will invoke eat of chalk
+
+
+		<Runnable>>
+		|run()
+		|
+	--------+--------
+	|		|implements	
+	Thread		|	 JFrame		
+	|run(){}	|	 |
+	|start(){}	-------+ |
+	|		       | | extends
+	Car		      MyFrame
+	run(){}			run(){}//mandate
+
+
+	Car car = new Car();
+	car.start();
+
+	MyFrame mfr = new MyFrame()
+	Thread t = new Thread(mfr);
+	t.start();
+
+
+I. (Car way) - extending java.lang.Thread
+a) write Car extends Thread
+b) override run()
+c) call the start()
+d) which will invoke your run()
+
+II. (MyFrame way) -implementing java.lang.Runnable 
+a) write MyFrame implements Runnable
+b) mandate to write run()
+c) create object of Thread t = new Thread()
+d) to its constructor pass the Runnable's object (ie, MyFrame)
+e) call Thread t's start() , which will call your MyFrame's run()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
