@@ -5,18 +5,24 @@ public class DivisionTest {
 		
 
 	
-			try {
-				Calculator.divide(100, 0);
-			} catch (Exception e1) {
-				System.out.println("Exception : "+e1);	
-			}
-		
+		try {
+			Calculator.divide(100, 4);
+		} catch (Exception e1) {
+			System.out.println("Exception : "+e1);	
+		}
+		finally {
+			System.out.println("finally : 1 Runs regardless of the exception");
+		}
+	
 		
 		try {
 			Calculator.divide(40, 5);
 		} catch (Exception e2) {
 			System.out.println("Exception : "+e2);	
 
+		}	
+		finally {
+			System.out.println("finally : 2 Runs regardless of the exception");
 		}
 		
 		try {
@@ -24,7 +30,11 @@ public class DivisionTest {
 		} catch (Exception e3) {
 			System.out.println("Exception : "+e3);	
 
-		}	
+		}		
+		finally {
+			System.out.println("finally : 3 Runs regardless of the exception");
+		}
+		
 		System.out.println("\nEND   of main");
 
 	}
