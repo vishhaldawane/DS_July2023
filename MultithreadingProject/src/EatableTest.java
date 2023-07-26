@@ -8,7 +8,6 @@ public class EatableTest {
 		System.out.println("--------");
 		
 		Chalk chalk = new Chalk();
-		//chalk.eat();
 		FoodItem food = new FoodItem(chalk);
 		food.start();
 	}
