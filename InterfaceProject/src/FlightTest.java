@@ -2,32 +2,67 @@
 public class FlightTest {
 	public static void main(String[] args) {
 		CommercialFlight commFlight = new CommercialFlight();
-		commFlight.checkTicket();
+		/*commFlight.checkTicket();
 		commFlight.checkIdentityOfCPassengers();
 		commFlight.fly();
-		commFlight.land();
+		commFlight.land();*/
 		
 		System.out.println("-----------");
 		
 		FighterFlight fightFlight = new FighterFlight();
-		fightFlight.armMissiles();
+		/*fightFlight.armMissiles();
 		fightFlight.fly();
 		fightFlight.fireMissile();
-		fightFlight.land();
+		fightFlight.land();*/
 		
 		System.out.println("-----------");
 		
 		CargoFlight cargoFlight = new CargoFlight();
-		cargoFlight.checkTheCapacity();
+		/*cargoFlight.checkTheCapacity();
 		cargoFlight.carryGoods();
 		cargoFlight.fly();
-		cargoFlight.land();
+		cargoFlight.land();*/
 		
+		RadarControlSystem.checkFlyingObjects(commFlight);
+		RadarControlSystem.checkFlyingObjects(fightFlight);
+		RadarControlSystem.checkFlyingObjects(cargoFlight);
+
 		
+		GroundOperation.checkLandingStatus(commFlight);
+		GroundOperation.checkLandingStatus(fightFlight);
+		GroundOperation.checkLandingStatus(cargoFlight);
+
+		/*	Flying f = commFlight;
+		f.fly();
 		
+		f = fightFlight;
+		
+		f.fly();
+		
+		f  = cargoFlight;
+		
+		f.fly();*/
 	}
 }
-class 
+
+class RadarControlSystem
+{
+	static void checkFlyingObjects(Flying x) {
+		System.out.println("CHECKING FLYING OBJECTS....");
+		//x.checkIdentityOfCPassengers();
+		//x.checkTicket();
+		x.fly();
+		//x.land();
+	}
+}
+class GroundOperation {
+	static void checkLandingStatus(Landing x) {
+		System.out.println("Checking the landing objects....");
+		x.land();
+	}
+}
+
+
 /*
 			Flying		Landing
 				|fly();		|land();
