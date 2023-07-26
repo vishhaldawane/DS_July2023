@@ -6,4 +6,8 @@
     <fullyQualifiedTypeName name="BankApplicationForm"/>
     <fullyQualifiedTypeName name="BankAccount"/>
     <fullyQualifiedTypeName name="WashingPowder"/>
+    <fullyQualifiedTypeName name="GraphicalChess"/>
+    <fullyQualifiedTypeName name="WebGraphicalChess"/>
+    <fullyQualifiedTypeName name="MusicalInstrument"/>
+    <fullyQualifiedTypeName name="StringBasedMusicalInstrument"/>
 </qualifiedTypeNameHistroy>
