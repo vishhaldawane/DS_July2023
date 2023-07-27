@@ -1,5 +1,4 @@
-:w
-
+	
 82877658968
 104673
 
@@ -1339,6 +1338,114 @@ b) mandate to write run()
 c) create object of Thread t = new Thread()
 d) to its constructor pass the Runnable's object (ie, MyFrame)
 e) call Thread t's start() , which will call your MyFrame's run()
+
+
+
+	isAlive() - to check if the thread is alive
+
+	getName() - name of the thread
+
+	setPriority() - 
+
+		MIN_PRIORITY=1
+		NORM_PRIORITY = 5 (default)
+		MAX_PRIORITY=10
+
+	getPriority()
+
+
+
+	Clicker1 - count numbers 
+	Clicker2 - count numbers
+
+
+
+
+Framework = semi developed application
+
+	Collection Framework
+	
+		
+	Components orthogonal space
+
+
+
+				DataType [ Content ]
+				|x ---------- Water
+				|	      FriedRice
+				|	      Noodles
+				|	      PaneerChilly
+				|	      Pickle
+		----------------------------------
+		|y		|i		|z
+		|		|		|
+	   Container	    Iterator	   Algorithm
+	   |			|		  |
+	 Bottle		       Straw		drink()
+	 Plate		       Spoon		eat()
+	 Bowl		       ChopSticks	eat();	
+	 Bowl		       Fork		eat();
+
+
+					Iterable
+					|
+					Collection
+					|
+			--------------------------------
+			|				|
+			List				Set
+			|duplicates			|unique
+		----------------		-----------------
+		|		|		|		|
+	ArrayList	LinkedList		TreeSet		HashSet
+
+growable array
+at one end
+
+	---------
+0	|	|
+	---------
+1	|	|
+	---------
+2	|	|
+	---------
+3	|	|
+	---------
+4	|	|
+
+           ^
+	  /|\
+	   |
+
+
+		
+
+
+
+	Juice = Juice Glass
+
+	Tea   = TeaCup
+
+	ButterMilk = Glass/Steel
+
+	Wine	 = WineGlass | Y shape
+
+	Container provider should produce its own Iterator
+
+	Coconut	  provider should produce the Straw
+
+	
+
+
+
+
+
+
+
+
+
+
+
 
 
 
