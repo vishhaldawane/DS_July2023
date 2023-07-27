@@ -3220,3 +3220,129 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:45.421
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.bWvCHWaB
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:45.421
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.bWvCHWaB
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:45.423
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:45.425
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.bWvCHWaB => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:53.254
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:53.255
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@af88174[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=552)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:53.256
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.552
+!MESSAGE Boot LS startup time from start to initialized: 3295ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.728
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.RyfuTrDzisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.728
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.729
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.731
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.732
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.732
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.RyfuTrDz => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.733
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.733
+!MESSAGE buffering callback sts4.classpath.RyfuTrDz CollectionProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.733
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.734
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.734
+!MESSAGE buffering callback sts4.classpath.RyfuTrDz BankApplicationProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.734
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.735
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.735
+!MESSAGE buffering callback sts4.classpath.RyfuTrDz BankingProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.735
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.736
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.736
+!MESSAGE buffering callback sts4.classpath.RyfuTrDz ExceptionHandlingProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.738
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.738
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.739
+!MESSAGE buffering callback sts4.classpath.RyfuTrDz InterfaceProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.741
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.742
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.743
+!MESSAGE buffering callback sts4.classpath.RyfuTrDz JungleProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.744
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.744
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.745
+!MESSAGE buffering callback sts4.classpath.RyfuTrDz MultithreadingProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.747
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.747
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.748
+!MESSAGE buffering callback sts4.classpath.RyfuTrDz OopsProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.749
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.749
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.750
+!MESSAGE buffering callback sts4.classpath.RyfuTrDz StaticFinalAbstractProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:56.750
+!MESSAGE executing callback sts4.classpath.RyfuTrDz 9 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 17:05:57.369
+!MESSAGE executing callback sts4.classpath.RyfuTrDz SUCCESS [done]
