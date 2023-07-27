@@ -1,10 +1,44 @@
+import java.util.Arrays;
 
 public class WashingMachineTEst {
 	public static void main(String[] args) {
 		
 		WashingPowder washPowder = new WashingPowder(100,"Nirma", "Front Load", true, 10.0f);
+		Water water = new Water("Soft",100,"Normal");
+		Electricity electricity = new Electricity("AC", 220.0f, 50, 5, "BEST");
+		
+		Cloth cloth1 = new Cloth("Cotton","White",500.0f,"Shirt",false);
+		Cloth cloth2 = new Cloth("Cotton","Red",600.0f,"Shirt",false);
+		Cloth cloth3 = new Cloth("Cotton","Blue",700.0f,"Jean",false);
+		
+		Cloth cloth4 = new Cloth("Cotton","Green",800.0f,"Kurta",false);
+		Cloth cloth5 = new Cloth("Cotton","Yellow",900.0f,"Pant",false);
+		
+		Cloth clothsBunch1[] = new Cloth[3];
+		clothsBunch1[0] = cloth1;
+		clothsBunch1[1] = cloth2;
+		clothsBunch1[2] = cloth3;
+		
+		Cloth clothsBunch2[] = new Cloth[3];
+		clothsBunch2[0] = cloth4;
+		clothsBunch2[1] = cloth5;
 		
 		System.out.println("wash powder : "+washPowder); //toString is invoked
+		
+	//	System.out.println(Arrays.toString(cloths));
+		
+		
+		//System.out.println("cloths : "+cloths);
+		WashingMachine washingMachine1 = new WashingMachine("Samsung",washPowder, water, electricity, clothsBunch1);
+		
+		WashingMachine washingMachine2 = new WashingMachine("\tLG",washPowder, water, electricity, clothsBunch2);
+
+		Thread thread1 = new Thread(washingMachine1);
+		Thread thread2 = new Thread(washingMachine2);
+		
+		thread1.start();
+		thread2.start();
+		
 		
 		
 	}
@@ -13,12 +47,35 @@ public class WashingMachineTEst {
 class Machine {
 	
 }
-class WashingMachine extends Machine { //isA
+class WashingMachine extends Machine implements Runnable { //isA
 	
-	WashingTub washTub = new WashingTub(); //hasA
+	String brandName;
+	private WashingTub washTub = new WashingTub(9,"Steel"); //hasA
 
+	WashingPowder washPowder;
+	Water water;
+	Electricity elect;
+	Cloth cloths[];
 	
-		Laundry wash(WashingPowder washPowder, Water water, Electricity elect, Cloth cloth[]) {
+	public WashingMachine(String brandName,WashingPowder washPowder, Water water, Electricity elect, Cloth[] cloths) {
+		super();
+		this.brandName = brandName;
+		this.washPowder = washPowder;
+		this.water = water;
+		this.elect = elect;
+		this.cloths = cloths;
+	}
+
+		public void run() {
+		
+				Laundry laundry = this.wash();
+		}
+		
+		Laundry wash() {
+			
+			for(int i=1;i<=20;i++) {
+				System.out.println(brandName+" is washing....."+Arrays.toString(cloths));
+			}
 			
 			return null;
 		}
@@ -316,6 +373,7 @@ class Cloth {
 	}
 	@Override
 	public String toString() {
+		//return color+" "+material+" "+type;
 		return "Cloth [material=" + material + ", color=" + color + ", cost=" + cost + ", type=" + type + ", clean="
 				+ clean + "]";
 	}

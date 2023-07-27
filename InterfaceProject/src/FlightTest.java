@@ -67,8 +67,11 @@ class GroundOperation {
 			Flying		Landing
 				|fly();		|land();
 				-------------
-					   |
-					 Flight
+					   |  Runnable
+					   |   |
+					   |  |
+					   |  |
+					   Flight
 					 	|
 					 	|
 					-------------------------------------------------
@@ -77,6 +80,11 @@ class GroundOperation {
 					|	   |checkTickets();		|  |fireMissile();	| | carryGoods();
 					|	   |					|  |				| |
 				CommercialFlight			FighterFlight			CargoFlight
+
+CommercialFlight commFlight = new ....();
+Thread t  = new Thread(commFlight);
+t.start();
+
 */
 interface Flying {
 	void fly();
@@ -84,7 +92,7 @@ interface Flying {
 interface Landing {
 	void land();
 }
-abstract class Flight implements Flying,Landing {
+abstract class Flight extends Thread implements Flying,Landing {
 	
 }
 

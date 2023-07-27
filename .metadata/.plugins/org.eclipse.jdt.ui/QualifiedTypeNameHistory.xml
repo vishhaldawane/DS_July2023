@@ -10,4 +10,21 @@
     <fullyQualifiedTypeName name="WebGraphicalChess"/>
     <fullyQualifiedTypeName name="MusicalInstrument"/>
     <fullyQualifiedTypeName name="StringBasedMusicalInstrument"/>
+    <fullyQualifiedTypeName name="CommercialFlight"/>
+    <fullyQualifiedTypeName name="FighterFlight"/>
+    <fullyQualifiedTypeName name="CargoFlight"/>
+    <fullyQualifiedTypeName name="RadarControlSystem"/>
+    <fullyQualifiedTypeName name="GroundOperation"/>
+    <fullyQualifiedTypeName name="SavingsAccount"/>
+    <fullyQualifiedTypeName name="FundTransferService"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="CarKeyNotFoundException"/>
+    <fullyQualifiedTypeName name="RedSignalDishnouredException"/>
+    <fullyQualifiedTypeName name="CarBatteryDownException"/>
+    <fullyQualifiedTypeName name="WashingMachine"/>
+    <fullyQualifiedTypeName name="Electricity"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
