@@ -3082,3 +3082,141 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:41:33.889
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.cZhiQMaE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:41:33.893
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.cZhiQMaE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:41:33.895
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:41:33.897
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.cZhiQMaE => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:47.389
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:47.391
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@af88174[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=552)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:47.391
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:50.861
+!MESSAGE Boot LS startup time from start to initialized: 3469ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.076
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.bWvCHWaBisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.076
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.076
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.077
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.077
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.077
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.bWvCHWaB => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.077
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.078
+!MESSAGE buffering callback sts4.classpath.bWvCHWaB CollectionProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.078
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.079
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.079
+!MESSAGE buffering callback sts4.classpath.bWvCHWaB BankApplicationProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.084
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.085
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.087
+!MESSAGE buffering callback sts4.classpath.bWvCHWaB BankingProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.087
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.089
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.090
+!MESSAGE buffering callback sts4.classpath.bWvCHWaB ExceptionHandlingProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.092
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.094
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.094
+!MESSAGE buffering callback sts4.classpath.bWvCHWaB InterfaceProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.097
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.098
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.098
+!MESSAGE buffering callback sts4.classpath.bWvCHWaB JungleProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.101
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.101
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.103
+!MESSAGE buffering callback sts4.classpath.bWvCHWaB MultithreadingProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.103
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.105
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.105
+!MESSAGE buffering callback sts4.classpath.bWvCHWaB OopsProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.107
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.109
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.109
+!MESSAGE buffering callback sts4.classpath.bWvCHWaB StaticFinalAbstractProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:51.110
+!MESSAGE executing callback sts4.classpath.bWvCHWaB 9 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-27 16:42:52.007
+!MESSAGE executing callback sts4.classpath.bWvCHWaB SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-07-27 16:54:25.755
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2092)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
