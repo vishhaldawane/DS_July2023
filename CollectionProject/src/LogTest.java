@@ -32,6 +32,8 @@ public class LogTest {
 
 		//NOW RETRIEVE THE STRAW FOR THE BOTTLE - retrieving iterator for the container
 		Iterator logIterator = logList.iterator();
+		//Reward  reward     = singer.singASong();
+		
 		System.out.println("Got the Iterator...now iterating the content....");
 		while(logIterator.hasNext()) {
 			Log x = (Log) logIterator.next(); //cast it to Log, as it was added as an Object
