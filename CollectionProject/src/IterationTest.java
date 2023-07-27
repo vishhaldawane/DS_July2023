@@ -84,7 +84,8 @@ class Demo
 		String theHint = scanner.next();
 		
 		Magician magician = EventAgency.getMagician(theHint);
-		Magic magic = magician.doTrick();
+		SavingsAccount savObj = new SavingsAccount();
+		Magic magic = magician.doTrick(savObj);
 		magic.show();
 		
 	}
@@ -103,26 +104,40 @@ class EventAgency {
 	}
 }
 
+interface Account {
+	void withdraw(float  amt);
+	void deposit(float amt);
+}
+class SavingsAccount implements Account {
+	public void withdraw(float amt) {
+		System.out.println("withdrawing..."+amt);
+	}
+	public void deposit(float amt) {
+		System.out.println("depositing...."+amt);
+	}
+}
 
 interface Magician
 {
-	Magic doTrick();	
+	Magic doTrick(Account acc);	
 }
 
 class CardMagician implements Magician
 {
-	public Magic doTrick() {
+	public Magic doTrick(Account accRef) {
 		System.out.println("Hiding some cards under the sleeves....");
 		Magic magic = new CardMagic();
+		accRef.deposit(5000);
 		return magic;
 	}
 }
 
 class HatMagician implements Magician
 {
-	public Magic doTrick() {
+	public Magic doTrick(Account accRef) {
 		System.out.println("Hiding the parrot under the Hat....");
 		Magic magic = new HatMagic();
+		accRef.deposit(6000);
 		return magic;
 	}
 }
@@ -150,10 +165,18 @@ class HatMagic implements Magic
 
 
 
+/*
 
+interface A {
+	W fun(X d, Y e, Z f);
+}
 
-
-
+class B implements A {
+	public void fun() {
+		
+	}
+}
+*/
 
 
 
