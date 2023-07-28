@@ -1,7 +1,0 @@
-package jungle.cave;
-
-public class Tiger {
-	void roar() {
-		System.out.println("Tiger is roaring..");
-	}
-}
