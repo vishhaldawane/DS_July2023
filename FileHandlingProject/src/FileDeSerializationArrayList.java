@@ -55,3 +55,13 @@ public class FileDeSerializationArrayList {
 		
 	}
 }
+
+
+/*
+ 
+ insert into mydept120 values (10,'IT','New York');
+ insert into mydept120 values (20,'TESTING','New Jersey');
+ insert into mydept120 values (30,'PURCHASE','New Delhi');
+ insert into mydept120 values (40,'SALES','Mumbai');
+ 
+  */
