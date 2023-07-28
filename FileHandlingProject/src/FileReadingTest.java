@@ -8,9 +8,9 @@ public class FileReadingTest {
 		System.out.println("Trying to read a file....");
 		
 		try {
-//			FileInputStream fileInputStream = new FileInputStream("king.txt");
+			FileInputStream fileInputStream = new FileInputStream("king.txt");
 
-			FileInputStream fileInputStream = new FileInputStream("/Users/apple/prince.txt");
+		//	FileInputStream fileInputStream = new FileInputStream("/Users/apple/prince.txt");
 			System.out.println("File is open...");
 
 			byte theChar=(byte)fileInputStream.read(); // read the first letter
