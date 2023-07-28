@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="java.awt.Image"/>
     <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
     <fullyQualifiedTypeName name="BankApplicationForm"/>
-    <fullyQualifiedTypeName name="BankAccount"/>
     <fullyQualifiedTypeName name="WashingPowder"/>
     <fullyQualifiedTypeName name="GraphicalChess"/>
     <fullyQualifiedTypeName name="WebGraphicalChess"/>
@@ -27,10 +26,22 @@
     <fullyQualifiedTypeName name="WashingMachine"/>
     <fullyQualifiedTypeName name="Electricity"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="HolidayPackage"/>
     <fullyQualifiedTypeName name="SingingIndustry"/>
     <fullyQualifiedTypeName name="CardMagician"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="java.awt.Label"/>
+    <fullyQualifiedTypeName name="MyNotepad"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
+    <fullyQualifiedTypeName name="BankAccount"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="FileSerializationTest"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
 </qualifiedTypeNameHistroy>
