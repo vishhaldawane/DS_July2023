@@ -1437,6 +1437,26 @@ at one end
 	
 
 
+	File Handling - File input / output stream = java.io
+
+
+
+
+stdin							stdout
+System.in(1)						System.out(2)
+	|
+	+--------->->->--------> -------------->->->---->	stderr(3)
+	input = reading		your	output = writing 
+				java 
+				program
+				|
+				|
+			------------------------
+			|	|	|
+			HDD	Memory	Network[ socket ]
+			|	|	|
+	File f = new File()    xyz	Socket sock = new Socket();
+		
 
 
 
@@ -1461,6 +1481,145 @@ at one end
 
 
 
+
+
+--------------------------------||------------------------------------
+	BYTE BASED	        ||			CHARACTER BASED
+	ASCII = 256		||		UNICODE = 65535
+   1 byte = min unit		||	1 char = 2 bytes = min unit
+InputStream	OutputStream	||	Reader		Writer
+  read()	   write()	||	  read()	  write()
+--------------------------------||------------------------------------
+FileInputStream|		||		  |			
+	     |			||		  |			
+	     |			||		  |			
+	     |			||		  |			
+	     |			||		  |			
+	     |			||		  |			
+	     |			||		  |			
+--------------------------------||------------------------------------
+
+int i=190; //8 bytes to represents
+
+	0000 0000 0000 0000 0000 0000 1011 1110
+	     4      3       <----2--> <---1--->
+
+on harddrive
+
+abc.txt
+--------
+190; // every this as a text 1 9 0 
+--------
+
+
+
+			 Animal
+			 | breathing();
+			 |
+		-----------------
+		|	 |	|
+		Mammal	 |	Bird - virtual base class(es)
+    giveBirth()	|	 | 	   |layEggs(); fly();
+	-------------	 |	----------
+	|	    |	 |	|	|
+	Tiger	    -------------	Parrot
+			  |
+			 Bat
+	
+
+
+		interface Flying
+		{
+			void flyWithAero();
+		}
+		interface Dreaming {
+			void flyInDream();
+		}
+
+	class ButterFly implements Flying, Dreaming
+	{
+		 void fly() { }
+	}
+
+	class Flight implements Flying
+	{
+		void fly() { }
+	}
+
+	
+
+	Object Serialization = process of storing private data on to the external device [ file ]
+
+	following interface doesnot 
+	have any method
+	- its empty interface
+	- known marker interface
+
+	- actually a contract 
+	signedup with JVM
+
+
+
+	java.lang.Serializable
+			|
+			BankAccount
+
+
+	ObjectOutputStream
+
+
+-------------------------------------------------------------
+
+
+
+	mysql
+
+		
+
+	FrontEnd				BackEnd
+	|					|
+	Java					HSQLDB
+						Oracle
+						MySQL
+						MS-SQLServer
+						Sybase
+						MongoDB
+						PostGresSQL
+						MariaDB
+		
+following is NOT inheritance diagram
+
+it just an understanding
+
+
+				...
+				Driver <-- interface
+				|   |
+				|  org.hsqldb.jdbc.JDBCDriver <-- implementation
+				|
+				DriverManager <-- to load the above driver
+				|	      <-- to connect to the DB
+				|
+			----------------
+			|
+			Connection <-- interface
+			|	createStatement();prepareStatement(),prepareCall()
+			|	
+	------------------------------------------
+	|		|			|
+	Statement	PreparedStatement	CallableStatement <-- interfaces
+	SELECT		INSERT/UPDATE/DELETE	PROCEDURE/FUNCTION
+
+
+
+
+
+
+		
+			
+
+				
+						
 
 
 
